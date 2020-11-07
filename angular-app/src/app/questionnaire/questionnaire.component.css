@@ -1,0 +1,211 @@
+.pos-left-ali{
+    background-image: url("../../assets/pattern_1.png")  ;
+    
+    
+    }
+    
+.left_form{
+    background-color: #2955a9;
+    min-height: 460px;
+    color: #fff;
+    text-align: center;
+    padding: 90px 30px 30px 30px;
+    box-sizing: border-box;
+    position: relative;
+    height: 501.2px;
+
+}
+    
+.left_form p{
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+.left_form h1 {
+    font-weight: 500;
+    color: #fff;
+    margin: 10px 0 0 0;
+    padding: 0;
+    font-size: 32px;
+    margin-bottom: 25px;
+}
+
+
+.right_form{
+
+    padding: 60px;
+    height:501.2px;
+    
+    
+    box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.1);
+    background: url("../../assets/pattern_1.png") repeat;
+    
+}
+
+
+
+/**right form**/
+.cinqElement{
+    margin-top: -10px;
+}
+
+ #version_2{
+   
+    background-color: #fff;
+    border-radius: 3px;
+    border: 1px solid #ddd;
+    min-height: 30px;
+    font-weight: 400;
+    margin-bottom: 74px;
+    margin-right: 50px;
+	max-width: 263px;
+    left: 35px;
+    max-width: 263px;
+    left: 35px;
+
+}
+.form-check-input {
+	position: absolute;
+   
+    height: 20px;
+    width: 20px;
+    margin-right: 10px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    border-radius: 3px;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    left: 33px;
+}
+ .form-check-label{
+
+	margin-left:20px;
+
+}
+ .pagination
+{padding-left :295px;
+margin-top: -38px;}
+ #version_2{
+    width : 193px;
+    margin-top: -19px;
+    bottom: -53px;
+}
+ .page-link {
+    bottom: -65px;
+    left: 106px;
+    width: 78px;
+    text-align: center;
+    font-size: 1.25em;
+}
+#botton_next,#sub{background-color: #2955a9;
+    position: absolute;
+    bottom: 70px;
+    left: 491px;
+    width:96.31px;
+}
+
+#botton_precedent{background-color: #25b254;
+    border-color: #28a745;
+    position: absolute;
+    bottom: 70px;
+    left: 39px;}
+
+    .deuxElement  #questio{
+        position: absolute;
+        bottom:250px;
+    }
+    
+    @media screen and (max-width: 991px) {
+        #botton_next,#sub{
+            
+    
+            left: 504px;
+            width:96.31px;
+
+        }
+        #sub{
+            bottom:50px
+            }
+        .deuxElement  #questio{
+            
+            bottom:200px;
+            right : 50px
+        }
+        .cinqElement #botton_next{
+            top:50px;
+        }
+        .deuxElement #version_2 {
+            left:-92px;
+        }
+        
+    }
+
+    @media screen and (max-width: 767px) {
+    .right_form{
+     height: 600.2px;
+    }
+    #botton_next,#sub{
+        left: 350px;
+        width:96.31px;
+    }
+    .deuxElement #version_2 {
+        left:50px;
+    }
+    
+}
+
+@media screen and (max-width: 575px) {
+    .right_form{
+    height: 738.2px;
+    }
+     .cinqElement   #botton_next{
+            
+    
+        bottom:1px;
+
+    }
+    .deuxElement #version_2{
+        top: -150px;
+        
+    }
+    
+       }
+@media screen and (max-width: 488.8px) {
+    #botton_next.cinqElement{
+        left: 124px;
+        bottom: 80px;
+    }
+    #sub{
+        left: 124px;
+        bottom: 393px;
+    }
+    #botton_next.deuxElement{
+        left: 124px;
+        bottom: 520px;
+        
+        
+    }
+    #botton_precedent.deuxElement{
+        left: 124px;
+        bottom: 460px;
+        
+    }
+    .right_form{
+        height:1000px;
+    }
+    .deuxElement #version_2{
+        top: -300px;
+        
+    }
+
+
+}
+
+
+    

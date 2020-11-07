@@ -1,0 +1,47 @@
+<!-- debut grand images -->
+<div class="firstpartie ">
+    <div id="bigimg" class="container-fluid font-weight-bold">
+        <div id="sub_content_in" class="container-fluid">
+            <div id="contenutextuel"  >
+                <h1>PREVENTION COVID-19 GUIDE</h1>
+                <p> to save your familly, your love and our planet</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- fin grand images -->
+
+
+
+<!-- debut UseFullTips -->
+<section class="container-fluid">
+    <div id="toptext" class="container text-center">
+        <h2 class="text-center">Some useful tips</h2>
+        <p>How to protecting yourself against Coronavirus<p>
+    </div>
+    <div class="container" id="contenutotal">
+        <div class="row" id="ensemble">           
+            <div class="card col-xs-4" style="width: 18em;" *ngFor="let useId of usefullTipsData">
+                <a>
+                    <div class="card-body">                   
+                        <img src="{{useId.src}}" id="imageid" />
+                        <h5 class="card-title">{{useId.title}}</h5>
+                        <p class="card-text">{{useId.paragraphe}}</p>                    
+                    </div>
+                </a>
+            </div>
+            
+        </div>
+    </div>
+</section>
+<!-- Fin UseFullTips -->
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,38 @@
+#navbarSupportedContent{
+	margin-top: -50px;
+	letter-spacing: 2px;
+}
+.bg-light {
+    background-color: #ffffff !important;
+}
+
+.logo-app{
+	
+	height: 100px;
+	width: 100px
+	
+}
+.logo-ali{
+	right:30px;
+	
+}
+.logo-ali span{
+	color:green;
+	
+}
+
+
+
+@media screen and (max-width: 991px) {
+    ul.navbar-nav.ml-auto {
+    margin-top: 50px;
+    }
+}
+@media screen and (max-width: 333px) {
+    ul.navbar-nav.ml-auto { 
+    text-align: center;
+    }
+    #aaaaa,#collapse navbar-collapse{
+        display: none;
+    }
+}

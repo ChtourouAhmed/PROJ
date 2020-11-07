@@ -1,0 +1,126 @@
+<section class="bande container">
+    <div class="container">
+        <div class="row">
+
+
+            <!--left form-->
+            <div class="col-lg-4 left_form text-center">
+                <img src="../../../../assets/info_graphic_1.png" class="haha" alt="logo">
+                <h1>CORONAVIRUS Health Questionnaire</h1>
+                <p> Help yourself in decision-making whether to seek professional medical advice or not. </p>
+            </div>
+            <!--fin left form-->
+
+
+
+
+
+            <!--right form-->
+            <div class=" col-lg-8 right_form" >
+                <div *ngFor="let question of questions ; index as questionId">
+                    <!--questionnaire-->
+                    <form #f="ngForm"  > 
+                    <div id="icilecontenu2" *ngIf="question==questio && questio.type!='formulaire'" [ngClass] ="{
+                                                                                    'deuxElement':questio.type === 'question2Element',
+                                                                                    'cinqElement':questio.type === 'question5Element',
+                                                                                    'formulaire':questio.type === 'formulaire',
+                                                                                    'reponse':questio.type === 'reponse'
+                                                                                    
+                                                                                }">	
+                        <a title="Question1"><h3>{{ questio.question }}</h3></a>
+                        
+                        
+                         
+                            <div class="row" id="questio">
+                                 
+                            <div class="container_check col-sm-6"  *ngFor="let reponse of question.reponses; index as reponseId">
+                                
+                                    
+                                     
+                                
+                                <div class=" box-center row">	
+                                    <div class="form-check"  id="version_2">
+                                        <input class="form-check-input" type="radio" name="{{ questio.question }}" value="{{reponse}}" id={{reponseId}} ngModel required>
+                                        <label class="form-check-label" for={{reponseId}}>
+                                            {{reponse}}
+                                            
+                                        </label>
+                                        
+                                        
+                                    </div>
+                                    
+                                </div>
+                                
+                        
+                                
+                                
+                            </div>
+                            
+                            
+                            </div> 
+                            
+                            
+                      
+                            
+
+                        
+                        
+                    </div>
+                    
+                    <!--boutton precident-->
+                    <button id="botton_precedent" class="btn btn-success" *ngIf="question==questio && questionId != 0 && question.type!='formulaire' && question.type!='reponse'"  [routerLink]="['/questionaires', questionId-1]"  [ngClass] ="{
+                                            'deuxElement':questio.type === 'question2Element',
+                                            'cinqElement':questio.type === 'question5Element'
+                                        }">	
+                    Presedent
+
+                    </button>
+                    <!--boutton next-->
+                    <button id="botton_next" type="button"  (click)="onSubmit(f)"  class="btn btn-primary"*ngIf="question==questio && question.type!='reponse' && question.type!='formulaire'"  [routerLink]="['/questionaires', questionId+1]" [ngClass] ="{
+                                                                                    'deuxElement':questio.type === 'question2Element',
+                                                                                    'cinqElement':questio.type === 'question5Element'
+                                                                                }">	
+                        
+                            Next
+                        
+                    </button>
+                
+                    </form>
+                    <!--formulaire -->
+                    <div id="icilecontenu8" *ngIf="question==questio && questio.type=='formulaire'" Class="formulaire">
+                        <h3 >Please fill with your personal data</h3>
+                        <form #f="ngForm" >
+                                <div class="form-group">
+                                    <label for="name">First and Last Name</label>
+                                    <input type="name" name="name" class="form-control" id="userName" aria-describedby="emailHelp" placeholder="Enter your first and last name" ngModel>
+                                    
+                                </div>
+                                <div class="form-group">
+                                    <label for="Email">Email address</label>
+                                    <input type="email" name="Email" class="form-control" id="userEmail" aria-describedby="emailHelp" placeholder="Enter your email" ngModel>
+                                    
+                                </div>
+                                <div class="form-group">
+                                    <label for="number">phone number</label>
+                                    <input type="number" name="number" class="form-control" id="userNumber" aria-describedby="emailHelp" placeholder="Enter your phone number" ngModel>
+                                    <small id="emailHelp" class="form-text text-muted">We'll never share your data with anyone else.</small>
+                                </div>
+                                <div class="form-check" >
+                                    <input type="checkbox" class="form-check-input" id="exampleCheck1" ngModel [ngModelOptions]="{standalone: true}">
+                                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                                </div>
+                                <button type="button"  (click)="onSubmit(f);final()" id="sub" class="btn btn-primary disabled"  [routerLink]="['/questionaires', questionId+1]" >Submit</button>
+                        </form>                                                    
+                    </div>
+                
+                </div>
+            </div> 
+            <!--fin right form-->
+
+
+
+
+        </div>
+    </div>
+</section>
+
